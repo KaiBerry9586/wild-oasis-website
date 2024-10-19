@@ -1,12 +1,14 @@
 import { Suspense } from "react";
 import CabinList from "../_components/CabinList";
 import Spinner from "../_components/Spinner";
-import { revalidatePath } from "next/cache";
+
+//30 seconds for testing
+export const revalidate = 30;
+
 export const metadata = { title: "Cabins" };
 
 export default function Page() {
   // CHANGE
-  revalidatePath("/cabins");
 
   return (
     <div>
